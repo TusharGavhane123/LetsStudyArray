@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <div className={styles.main}>
       <div>
-        <div>Array Methods and its description with demo examples</div>
+        <div style={{marginBottom:15, fontSize:22, fontWeight:550}}>Array Methods and its description with demo examples</div>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItem: 'flex-start', gap: 2 }}>
         {
           arrayMethods.map((value) => {
             return (<>
-              <button onClick={() => { setArrayMethodName(value) }} key={value}>{value}</button>
+              <button onClick={() => { setArrayMethodName(value) }} key={value} className={styles.button} style={{marginRight: 10}}>{value}</button>
             </>)
           })
         }
